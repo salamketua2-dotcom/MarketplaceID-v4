@@ -7,6 +7,11 @@ process.env.NODE_ENV === "production";
 
 const pool = new Pool({
 
+console.log(
+  "DB URL =",
+  process.env.DATABASE_URL?.replace(/:\/\/.*@/, "://****@")
+);
+
   connectionString:
   process.env.DATABASE_URL,
 
